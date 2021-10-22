@@ -23,9 +23,9 @@ function TodoList() {
 
     }
 
-    this.marcTodoAsDone = () => {
+    this.marcTodoAsDone = (elem) => {
         //mark todo as done
-
+        this.todoListElems[elem].status = 'done';
     }
     this.deleteTodo = (elem, elemAdded) => {
         //delete todo from list
@@ -54,7 +54,7 @@ const todoClearAll = document.querySelector('.todoapp__btn');
 todoInput.addEventListener('keydown', (e) => {
     if(e.target.value !== '') {
         if(e.keyCode === 13) {
-            todoList.addNewTodo(e.target.value, 'nuevo', elemAdded);
+            todoList.addNewTodo(e.target.value, 'undone', elemAdded);
         }
     }
 
@@ -95,7 +95,20 @@ const elemAdded = () => {
         btnElem.addEventListener('click', () => {
             //delete list
             todoList.deleteTodo(index, elemAdded);
-        })
+        });
+
+        //mark as done
+        listElem.addEventListener('click', (e) => {
+            todoList.marcTodoAsDone(index);
+            e.target.style.textDecoration = "line-through";
+            e.target.style.color = "#33cc00";
+        });
+
+        //keep done tasks
+        if(todo.status === 'done') {
+           listElem.style.textDecoration = "line-through";
+           listElem.style.color = "#33cc00";
+        }
 
         if(todoList.todoListElems.length > 1) {
             todoClearAll.style.display = "block";

@@ -53,7 +53,8 @@ body{
     width: inherit;
     padding: 19px 15px;
     background: white;
-    color:black
+    color:black;
+    cursor: pointer;
 }
 .todoapp__ul__li:nth-child(even) {
     background: rgb(238, 237, 237);
