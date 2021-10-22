@@ -1,0 +1,78 @@
+/***************************************
+*
+* AUTHOR: Victor Navarro
+* FECHA: 21/20/2021
+* APP-NAME: TodoApp
+*
+****************************************/
+
+/*Resets*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(230, 226, 226);
+    font-family: sans-serif;
+}
+/*main styles*/
+.todoapp{
+    width: 600px;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top:10%
+}
+.todoapp__title{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+}
+.todoapp__input{
+    display: block;
+    width: 100%;
+    padding: 18px 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: .5px 2px 3.1px rgba(0,0,0,.3);
+}
+.todoapp__ul{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: .5px 2px 3.1px rgba(0,0,0,.3);
+    overflow: hidden;
+}
+.todoapp__ul__li{
+    display: inherit;
+    box-sizing: border-box; 
+    position: relative;
+    width: inherit;
+    padding: 19px 15px;
+    background: white;
+    color:black
+}
+.todoapp__ul__li:nth-child(even) {
+    background: rgb(238, 237, 237);
+}
+.todoapp__ul__li__btn{
+    padding: 7px 6px;
+    font-size: .7em;
+    position: absolute;
+    right: 15px;
+    top: 12.5px;
+    cursor: pointer;
+}
+.todoapp__btn{
+    padding: 7px 6px;
+    font-size: .7em;
+    right: 15px;
+    top: 12.5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+    display: none;
+}
