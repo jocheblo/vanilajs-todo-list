@@ -3,4 +3,4 @@
 
 1- open index.html in a browser.
 
-2- That's is! :)
+2- That's it! :)
